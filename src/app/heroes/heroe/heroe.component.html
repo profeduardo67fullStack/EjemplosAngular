@@ -1,0 +1,31 @@
+<!--4.- Agregamos algo al template  -->
+<h1>Ejemplo con los Heroes</h1>
+<h2>{{nombre}}</h2>
+
+<dl>
+    <td>Nombre del Heroe: </td>
+    <dd>{{nombre}}</dd>
+
+    <td>Edad</td>
+    <dd>{{edad}}</dd>
+
+    <td>Capitalizado: </td>
+    <!-- Aca llamamos a la propiedad getter -->
+    <dd>{{nombreCapitalizado}}</dd>
+
+    <td>Función: </td>
+    <!-- Aca llamamos a la propiedad getter -->
+    <dd>{{obtenerNombre()}}</dd>
+
+</dl>
+
+<!-- Creamos dos botones para cambiar el nombre del 
+heroe y su edad -->
+
+<button (click)="cambiarNombre();">
+    Cambiar Heroe
+</button>
+
+<button (click)="cambiarEdad();">
+    Cambiar Edad
+</button>

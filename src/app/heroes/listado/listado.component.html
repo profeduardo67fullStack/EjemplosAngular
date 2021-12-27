@@ -1,0 +1,29 @@
+<h1>Listado de Heroes</h1>
+
+<ul>
+    <!-- Como si hicieramos un ciclo para reco
+    rrer el arreglo -->
+
+    <!-- Declaramos una variable con nombre heroe
+    del arreglo heroes, que sera la referencia
+    a cada uno de los valores o iteraciones
+    opcionalmente podemos extraer el índice del
+    arreglo-->
+    
+    <li *ngFor="let heroe of heroes let i = index">
+        {{i + 1}} {{heroe}}
+    </li>
+</ul>
+
+<button (click)="borrarHeroe();">Borrar Último Heroe</button>
+
+
+<div *ngIf="heroeBorrado !== ''; else noBorrado">
+    <h3>Heroe Borrado: <small>{{heroeBorrado}}</small></h3>
+    
+</div>
+
+<<ng-template #noBorrado>
+    <h3>No ha borrado nada</h3>
+</ng-template>
+
